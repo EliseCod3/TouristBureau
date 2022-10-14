@@ -114,6 +114,7 @@ function loadActivites(selectedCategory) {
     for (const activity of activities) {
        if(activity.category == selectedCategory) {
         addOptionToList(activity.name, activity.id, activitiesList);
+        displayActivityDetails(activity.description, activity.location, activity.price);
        }
     }
 }
@@ -121,4 +122,11 @@ function loadActivites(selectedCategory) {
 function addOptionToList(text, value, list) {
    let option = new Option(text, value);
    list.appendChild(option);
+}
+
+function displayActivityDetails(description, location, price) {
+    const messageParagraph = document.getElementById("messageDetails");
+    let details = `${description, location, price.value}`;
+    
+    messageParagraph.innerText = details
 }

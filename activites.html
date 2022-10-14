@@ -7,16 +7,24 @@
     <title>Tourist Activites</title>
 </head>
 <body>
-    <select name="categoryList" id="categoryList" onchange="selectCategory();">
-        <option value="">Select one</option>
-        <option value="Adventures">Adventure</option>
-        <option value="Arts & Crafts">Arts & Crafts</option>
-        <option value="Museums">Museums</option>
-        <option value="Wine Tastings">Wine Tastings</option>
-        <option value="Other">Other</option>
-    </select>
+    <div class="container">
+        <select name="categoryList" id="categoryList" onchange="selectCategory();">
+            <option value="">Select one</option>
+            <option value="Adventures">Adventure</option>
+            <option value="Arts & Crafts">Arts & Crafts</option>
+            <option value="Museums">Museums</option>
+            <option value="Wine Tastings">Wine Tastings</option>
+            <option value="Other">Other</option>
+        </select>
 
-    <select name="activitiesList" id="activitiesList" size="4"></select>
+    </div>
+
+    <div class="container">
+        <select name="activitiesList" id="activitiesList" size="4" onchange=""></select>
+    </div>
+
+    <p id="messageDetails"></p>
+
 
     <script src="./scripts/main.js"></script>
 </body>
