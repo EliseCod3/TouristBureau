@@ -100,3 +100,25 @@ let activities = [
         price: 0.00 
     }
 ];
+
+const categoryList = document.getElementById("categoryList");
+const activitiesList = document.getElementById("activitiesList");
+
+function selectCategory() {
+    const selectedCategory = categoryList.value;
+   loadActivites(selectedCategory);
+}
+
+function loadActivites(selectedCategory) {
+    activitiesList.options.length = 0;
+    for (const activity of activities) {
+       if(activity.category == selectedCategory) {
+        addOptionToList(activity.name, activity.id, activitiesList);
+       }
+    }
+}
+
+function addOptionToList(text, value, list) {
+   let option = new Option(text, value);
+   list.appendChild(option);
+}
