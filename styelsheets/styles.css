@@ -1,0 +1,36 @@
+* {
+    align-content: center;
+    text-align: center;
+}
+
+div {
+    margin: 2rem;
+}
+
+header {
+    text-align: center;
+    font-size: 3rem;
+    background-color: paleturquoise;
+    padding: 1rem;
+}
+
+select {
+    width: 10rem;
+
+}
+#categoryList {
+    height: 2rem;
+    text-align: center;
+    align-content: center;
+}
+#activitiesList {
+    width: 14rem;
+}
+
+body {
+    background-color:antiquewhite;
+}
+.card-body {
+    text-align: center;
+    
+}

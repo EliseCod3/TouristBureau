@@ -5,9 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styelsheets/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <title>Tourist Activites</title>
 </head>
 <body>
+
+    <header>Get into the community</header>
+
     <div class="container">
         <select name="categoryList" id="categoryList" onchange="selectCategory();">
             <option value="">Select one</option>
@@ -23,17 +27,20 @@
         <select name="activitiesList" id="activitiesList" size="4" onchange="selectActivity()"></select>
     </div>
 
-    <div id="activityDetails" class="card" style="width: 18rem;display: none;">
-        <div class="card-body">
-          <h5 id="activityTitle" class="card-title"></h5>
-          <p id="activityDescription" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <h6 id="activityCost" class="card-subtitle mb-2 text-muted"></h6>
-          <button class="btn btn-primary">Buy</button>
+
+        <div id="activityDetails" class="card" style="width: 18rem;display: none;">
+            <div class="card-body">
+              <h5 id="activityTitle" class="card-title">Riveres Runners</h5>
+              <p id="activityDescription" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h6 id="activityCost" class="card-subtitle mb-2 text-muted">$50.00</h6>
+              <button class="btn btn-dark">Buy</button>
+            </div>
         </div>
-    </div>
+
 
 
 
     <script src="./scripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
 </html>
