@@ -129,6 +129,7 @@ function addOptionToList(text, value, list) {
 }
 
 function displayActivityDetails(selectedActivity) {
+    
     const activityTitle = document.getElementById("activityDetails");
     const activityDescription = document.getElementById("activityDescription");
     const activityCost = document.getElementById("activityCost");
