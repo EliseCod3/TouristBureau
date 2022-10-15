@@ -125,6 +125,8 @@ function addOptionToList(text, value, list) {
 }
 
 function displayActivityDetails(description, location, price) {
+    const activityDetails = document.getElementById("activityDetails");
+    activityDetails.style.display = "block";
     const messageParagraph = document.getElementById("messageDetails");
     let details = `${description, location, price.value}`;
     
