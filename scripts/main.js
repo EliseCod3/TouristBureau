@@ -114,9 +114,13 @@ function loadActivites(selectedCategory) {
     for (const activity of activities) {
        if(activity.category == selectedCategory) {
         addOptionToList(activity.name, activity.id, activitiesList);
-        displayActivityDetails(activity.description, activity.location, activity.price);
-       }
+        }
     }
+}
+
+function selectActivity() {
+    const selectedActivity = activitiesList.value;
+    displayActivityDetails(selectedActivity);
 }
 
 function addOptionToList(text, value, list) {
@@ -124,8 +128,18 @@ function addOptionToList(text, value, list) {
    list.appendChild(option);
 }
 
-function displayActivityDetails(description, location, price) {
+function displayActivityDetails(selectedActivity) {
+    const activityTitle = document.getElementById("activityDetails");
+    const activityDescription = document.getElementById("activityDescription");
+    const activityCost = document.getElementById("activityCost");
     const activityDetails = document.getElementById("activityDetails");
-    activityDetails.style.display = "block";
 
+    activityDetails.style.display = "block";
+    for (const activity of activities) {
+        if (activity.name == selectedActivity) {
+            activityTitle.innerText = ` ${activity.name}`;
+            activityDescription.innerText = ` ${activity.description}`;
+            activityCost.innerText = ` ${activity.price}`;
+        }
+    }
 }

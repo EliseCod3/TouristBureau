@@ -20,15 +20,15 @@
     </div>
 
     <div class="container">
-        <select name="activitiesList" id="activitiesList" size="4" onchange="displayActivityDetails()"></select>
+        <select name="activitiesList" id="activitiesList" size="4" onchange="selectActivity()"></select>
     </div>
 
     <div id="activityDetails" class="card" style="width: 18rem;display: none;">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-          <button class="btn btn-primary">Go somewhere</button>
+          <h5 id="activityTitle" class="card-title"></h5>
+          <p id="activityDescription" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <h6 id="activityCost" class="card-subtitle mb-2 text-muted"></h6>
+          <button class="btn btn-primary">Buy</button>
         </div>
     </div>
 
