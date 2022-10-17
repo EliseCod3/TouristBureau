@@ -110,6 +110,7 @@ function selectCategory() {
 }
 
 function loadActivites(selectedCategory) {
+    activitiesList.style.display = "inline";
     activitiesList.options.length = 0;
     for (const activity of activities) {
        if(activity.category == selectedCategory) {
@@ -119,8 +120,13 @@ function loadActivites(selectedCategory) {
 }
 
 function selectActivity() {
-    const selectedActivity = activitiesList.value;
-    displayActivityDetails(selectedActivity);
+    const selectedActivityId = activitiesList.value;
+    for (const activity of activities) {
+        if (activity.id == selectedActivityId) {
+            displayActivityDetails(activity.name, activity.description, activity.price,);
+        }
+        
+    }
 }
 
 function addOptionToList(text, value, list) {
@@ -128,19 +134,21 @@ function addOptionToList(text, value, list) {
    list.appendChild(option);
 }
 
-function displayActivityDetails(selectedActivity) {
+function displayActivityDetails(name, description, price) {
     
-    const activityTitle = document.getElementById("activityDetails");
-    const activityDescription = document.getElementById("activityDescription");
-    const activityCost = document.getElementById("activityCost");
-    const activityDetails = document.getElementById("activityDetails");
+    document.getElementById("activityTitle").innerText = name;
+    document.getElementById("activityDescription").innerText = description;
+    document.getElementById("activityCost").innerText = price.toFixed(2);
 
-    activityDetails.style.display = "block";
-    for (const activity of activities) {
-        if (activity.name == selectedActivity) {
-            activityTitle.innerText = ` ${activity.name}`;
-            activityDescription.innerText = ` ${activity.description}`;
-            activityCost.innerText = ` ${activity.price}`;
-        }
-    }
+    const activityDetails = document.getElementById("activityDetails");
+    activityDetails.style.display = "inline-block";
+
+    // // for (const activity of activities) {
+    //     if (activity.name == selectedActivity) {
+    //         activityTitle.innerText = ` ${name}`;
+    //         activityDescription.innerText = ` ${description}`;
+    //         activityCost.innerText = ` ${price.toFixed(2)}`;
+    //     }
+    // }
+
 }
