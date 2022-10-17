@@ -138,7 +138,7 @@ function displayActivityDetails(name, description, price) {
     
     document.getElementById("activityTitle").innerText = name;
     document.getElementById("activityDescription").innerText = description;
-    document.getElementById("activityCost").innerText = price.toFixed(2);
+    document.getElementById("activityCost").innerText = ` $ ${price.toFixed(2)}`;
 
     const activityDetails = document.getElementById("activityDetails");
     activityDetails.style.display = "inline-block";
