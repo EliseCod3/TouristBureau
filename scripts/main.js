@@ -103,6 +103,8 @@ let activities = [
 
 const categoryList = document.getElementById("categoryList");
 const activitiesList = document.getElementById("activitiesList");
+const infoInput = document.getElementById("info-input");
+const buyBtn = document.getElementById("buy-btn");
 
 function selectCategory() {
     const selectedCategory = categoryList.value;
@@ -125,7 +127,13 @@ function selectActivity() {
         if (activity.id == selectedActivityId) {
             displayActivityDetails(activity.name, activity.description, activity.price,);
         }
-        
+    }
+    for (const activity of activities) {
+        if (activity.price <= 0) {
+            buyBtn.style.display = "inline-block";
+        } else if (activity.price > 0) {
+            buyBtn.style.display = "none";
+        }
     }
 }
 
@@ -151,4 +159,12 @@ function displayActivityDetails(name, description, price) {
     //     }
     // }
 
+}
+
+function DisplayInfoForm() {
+    infoInput.style.display = "block";
+}
+
+window.onload = () => {
+    buyBtn.onclick = DisplayInfoForm;
 }
